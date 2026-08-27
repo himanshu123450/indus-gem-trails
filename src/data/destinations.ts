@@ -1,0 +1,130 @@
+import type { Destination } from "@/types";
+
+import pachmarhi from "@/assets/dest-pachmarhi.jpg";
+import orchha from "@/assets/dest-orchha.jpg";
+import mandu from "@/assets/dest-mandu.jpg";
+import chanderi from "@/assets/dest-chanderi.jpg";
+import tamia from "@/assets/dest-tamia.jpg";
+
+/** Mock destination catalogue for the prototype (Madhya Pradesh focus). */
+export const destinations: Destination[] = [
+  {
+    id: "pachmarhi",
+    name: "Pachmarhi",
+    state: "Madhya Pradesh",
+    image: pachmarhi,
+    tagline: "Satpura's forested plateau of waterfalls and caves",
+    description:
+      "A quiet hill station on the Satpura plateau with waterfalls, ancient rock shelters and forest trails managed with local guides.",
+    distanceFromHubKm: 210,
+    estimatedBudget: 9500,
+    crowdLevel: "Medium",
+    highlights: ["Bee Falls", "Dhoopgarh sunset", "Satpura forest trails"],
+    natureScore: 95,
+    heritageScore: 58,
+    adventureScore: 82,
+    cultureScore: 55,
+    foodScore: 60,
+    wildlifeScore: 78,
+    crowdScore: 66,
+    budgetScore: 72,
+    sustainabilityScore: 84,
+    photographyScore: 90,
+  },
+  {
+    id: "orchha",
+    name: "Orchha",
+    state: "Madhya Pradesh",
+    image: orchha,
+    tagline: "Bundela palaces on the calm Betwa river",
+    description:
+      "A small riverside town of cenotaphs and palaces where homestays and local guides carry most of the visitor economy.",
+    distanceFromHubKm: 320,
+    estimatedBudget: 7200,
+    crowdLevel: "Low",
+    highlights: ["Chaturbhuj Temple", "Betwa river walk", "Chhatris at dusk"],
+    natureScore: 62,
+    heritageScore: 96,
+    adventureScore: 48,
+    cultureScore: 88,
+    foodScore: 72,
+    wildlifeScore: 40,
+    crowdScore: 84,
+    budgetScore: 86,
+    sustainabilityScore: 88,
+    photographyScore: 92,
+  },
+  {
+    id: "mandu",
+    name: "Mandu",
+    state: "Madhya Pradesh",
+    image: mandu,
+    tagline: "Afghan-era ruins across a monsoon-green plateau",
+    description:
+      "A sprawling ruined city best explored by cycle, with baobab groves, stepwells and village kitchens serving regional food.",
+    distanceFromHubKm: 285,
+    estimatedBudget: 8100,
+    crowdLevel: "Low",
+    highlights: ["Jahaz Mahal", "Rewa Kund", "Cycle heritage loop"],
+    natureScore: 70,
+    heritageScore: 92,
+    adventureScore: 55,
+    cultureScore: 80,
+    foodScore: 84,
+    wildlifeScore: 38,
+    crowdScore: 80,
+    budgetScore: 82,
+    sustainabilityScore: 86,
+    photographyScore: 88,
+  },
+  {
+    id: "chanderi",
+    name: "Chanderi",
+    state: "Madhya Pradesh",
+    image: chanderi,
+    tagline: "A handloom town beneath a hilltop fort",
+    description:
+      "Home of Chanderi weaving, where visits sit directly with weaver families, dyers and small craft cooperatives.",
+    distanceFromHubKm: 265,
+    estimatedBudget: 5600,
+    crowdLevel: "Low",
+    highlights: ["Weaver workshops", "Kirti Durg fort", "Jain rock carvings"],
+    natureScore: 52,
+    heritageScore: 84,
+    adventureScore: 36,
+    cultureScore: 95,
+    foodScore: 70,
+    wildlifeScore: 28,
+    crowdScore: 92,
+    budgetScore: 94,
+    sustainabilityScore: 93,
+    photographyScore: 78,
+  },
+  {
+    id: "tamia",
+    name: "Tamia",
+    state: "Madhya Pradesh",
+    image: tamia,
+    tagline: "Misty Satpura valleys almost nobody visits",
+    description:
+      "A remote forest escarpment near Patalkot with tribal villages, sunrise viewpoints and community-run eco stays.",
+    distanceFromHubKm: 175,
+    estimatedBudget: 4800,
+    crowdLevel: "Low",
+    highlights: ["Patalkot valley", "Forest sunrise point", "Bharia village walk"],
+    natureScore: 93,
+    heritageScore: 34,
+    adventureScore: 88,
+    cultureScore: 76,
+    foodScore: 55,
+    wildlifeScore: 82,
+    crowdScore: 96,
+    budgetScore: 95,
+    sustainabilityScore: 95,
+    photographyScore: 85,
+  },
+];
+
+export function getDestinationById(id: string): Destination | undefined {
+  return destinations.find((destination) => destination.id === id);
+}
